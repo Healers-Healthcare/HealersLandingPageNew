@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const porterSans = localFont({
+  src: "./fonts/PorterSansBlock-Regular.ttf",
+  variable: "--font-porter-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
@@ -26,9 +32,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${porterSans.variable}  antialiased`}
       >
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+
         {children}
+          </ThemeProvider>
       </body>
     </html>
   );
