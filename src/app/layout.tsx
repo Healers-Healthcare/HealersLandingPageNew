@@ -30,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${porterSans.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${porterSans.variable}  antialiased `}
       >
         <ThemeProvider
             attribute="class"
@@ -47,3 +47,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+
+/// react js  client side rendering
+/// next js is server side rendering
