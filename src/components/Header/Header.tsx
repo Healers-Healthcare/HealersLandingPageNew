@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 import Cubic from '../3D_Elements/SampleCube'
 import DNA from '../3D_Elements/DNA'
+import Globe from '../3D_Elements/Globe'
 
 export default function Header() {
   
   return (
-    <div className="bg-gradient-to-br from-[#030c19] via-[#020910] to-[#01080f] bg-opacity-45 text-white h-screen  overflow-x-hidden">
+    <div className="bg-gradient-to-br from-[#030c19] via-[#020910] to-[#01080f] bg-opacity-45 text-white h-screen">
       <header className="container mx-auto px-4 py-6">
         <nav className="flex justify-between items-center mb-16">
           <div className="flex items-center space-x-2">
@@ -27,11 +28,12 @@ export default function Header() {
           </Button>
         </nav>
         
-        <div className="flex flex-col md:flex-row items-center justify-between ">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <h1 className="text-5xl md:text-7xl lg:text-[11rem] font-bold ">
+        <div className="flex flex-col md:flex-row items-center justify-between px-10 overflow-x-hidden">
+          <div className="md:w-1/2 mb-8 md:mb-0 h-full">
+            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-5xl md:text-7xl lg:text-[11rem] leading-none text-transparent dark:from-white dark:to-slate-900/10 font-bold mt-2">
               MEND 
-            </h1>
+            </span>
+            
               <br /> 
               <div className='flex items-start -mt-8'>
 
@@ -39,7 +41,7 @@ export default function Header() {
               
               <h1 className='text-5xl md:text-7xl lg:text-[11rem] font-bold mb-4'>HEALTH</h1>
               </div>
-            <p className="text-lg mb-8">
+            <p className="text-xl mt-5 mb-4">
               Welcome to our Healers Healthcare, where we Simplify Appointments
               and Revolutionize Your Health Management
             </p>
@@ -47,9 +49,10 @@ export default function Header() {
           <div className="md:w-1/2 flex justify-center">
             {/* <div className="w-64 h-64 bg-gradient-to-br from-purple-500 via-blue-500 to-green-500 rounded-3xl transform rotate-12"></div> */}
            
-            <div className='absolute -translate-y-72 translate-x-40 z-1'>
+            <div className='absolute -translate-y-64   translate-x-14 '>
             {/* <DNA /> */}
-            <Cubic />
+            {/* <Cubic /> */}
+            <Globe />
             </div>
           </div>
         </div>
