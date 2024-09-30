@@ -5,8 +5,7 @@ export default function Cubic() {
     <main >
       <Spline
         scene="https://prod.spline.design/KAWmCRqDgvzcqPzq/scene.splinecode" 
-        width={600}
-        height={600}
+       
       />
     </main>
   );
