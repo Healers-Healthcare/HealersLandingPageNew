@@ -6,7 +6,7 @@ import Image from 'next/image'
 // import Cubic from '../3D_Elements/SampleCube'
 // import DNA from '../3D_Elements/DNA'
 import Globe from '../3D_Elements/Globe'
-import Cubic from '../3D_Elements/SampleCube'
+// import Cubic from '../3D_Elements/SampleCube'
 
 export default function Header() {
   
