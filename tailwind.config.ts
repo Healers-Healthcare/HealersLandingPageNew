@@ -1,17 +1,18 @@
 import type { Config } from "tailwindcss"
-import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette"
-
-// The plugin function to add CSS variables for Tailwind colors
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
+  const allColors = theme('colors');
+  const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
-
   addBase({
     ":root": newVars,
   });
 }
+
+
+
+// The plugin function to add CSS variables for Tailwind colors
 
 const config = {
   darkMode: ["class"],
@@ -91,6 +92,7 @@ const config = {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     require("tailwindcss-animate"),
     addVariablesForColors, // Add the new plugin here
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function ({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) {
       addUtilities({
         '.scrollbar-hide': {
