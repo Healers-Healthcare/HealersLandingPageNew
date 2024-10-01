@@ -1,10 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss"
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
+// const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+ 
 function addVariablesForColors({ addBase, theme }: any) {
-  const allColors = theme('colors');
+  const allColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
+ 
   addBase({
     ":root": newVars,
   });
@@ -93,18 +102,7 @@ const config = {
     require("tailwindcss-animate"),
     addVariablesForColors, // Add the new plugin here
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    function ({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) {
-      addUtilities({
-        '.scrollbar-hide': {
-          /* Hide scrollbar for Chrome, Safari and Opera */
-          '-ms-overflow-style': 'none',  /* IE and Edge */
-          'scrollbar-width': 'none',     /* Firefox */
-          '&::-webkit-scrollbar': {
-            display: 'none',
-          },
-        },
-      });
-    },
+    addVariablesForColors,
   ],
 } satisfies Config
 
