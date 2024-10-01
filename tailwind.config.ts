@@ -1,4 +1,17 @@
 import type { Config } from "tailwindcss"
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette"
+
+// The plugin function to add CSS variables for Tailwind colors
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
 
 const config = {
   darkMode: ["class"],
@@ -7,7 +20,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -74,7 +87,23 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require("tailwindcss-animate"),
+    addVariablesForColors, // Add the new plugin here
+    function ({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* Hide scrollbar for Chrome, Safari and Opera */
+          '-ms-overflow-style': 'none',  /* IE and Edge */
+          'scrollbar-width': 'none',     /* Firefox */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        },
+      });
+    },
+  ],
 } satisfies Config
 
 export default config
