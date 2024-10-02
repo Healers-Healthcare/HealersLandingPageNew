@@ -33,18 +33,21 @@ export default function Header() {
         </nav>
         
         <div className="flex flex-col lg:flex-row items-center justify-between px-10 overflow-x-hidden">
-          <div className=" md:w-1/2 mb-8 md:mb-0 h-full">
-            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-5xl md:text-7xl lg:text-[11rem] leading-none text-transparent dark:from-white dark:to-slate-900/10 font-bold mt-2">
+          <div className=" md:w-1/2  md:mb-0 h-full text-center md:text-left">
+          <div className='flex flex-col md:items-start'>
+
+            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl md:text-8xl lg:text-[9rem] xl:text-[11rem] leading-none text-transparent dark:from-white dark:to-slate-900/10 font-bold mt-2">
               MEND 
             </span>
             
               <br /> 
-              <div className='flex items-start -mt-8'>
+              <div className='flex flex-col md:flex-row items-center md:items-start -mt-8'>
 
-              <h1 className='text-xl md:text-3xl lg:text-6xl  mt-7'>YOUR</h1> 
+              <h1 className='text-xl md:text-3xl xl:text-6xl mt-4 md:mt-7'>YOUR</h1> 
               
-              <h1 className='text-5xl md:text-7xl lg:text-[11rem] font-bold mb-4'>HEALTH</h1>
+              <h1 className='text-6xl md:text-8xl lg:text-[9rem] xl:text-[11rem] font-bold mb-4'>HEALTH</h1>
               </div>
+          </div>
             <p className="text-xl mt-5 mb-4 text-[#9e9e9e]">
               Welcome to our Healers Healthcare, where we Simplify Appointments
               and Revolutionize Your Health Management
@@ -53,7 +56,7 @@ export default function Header() {
           <div className="md:w-1/2 flex justify-center">
             {/* <div className="w-64 h-64 bg-gradient-to-br from-purple-500 via-blue-500 to-green-500 rounded-3xl transform rotate-12"></div> */}
            
-            <div className='translate-x-14 '>
+            <div className='translate-x-0 md:translate-x-10 lg:translate-x-14'>
             {/* <DNA /> */}
             {/* <Cubic /> */}
             <Globe />
@@ -63,7 +66,7 @@ export default function Header() {
       </header>
       
       <div className="container mx-auto px-4  grid md:grid-cols-2 gap-8 ">
-        <div className="bg-gradient-to-br from-[#1a1f3d86] to-[#080808] px-10 py-10 rounded-xl flex items-center justify-around space-x-20">
+        <div className="bg-gradient-to-br from-[#1a1f3d86] to-[#080808] px-10 py-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-20">
           {/* <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-md"></div> */}
           <Image src="/CubicTesting.png" alt="Cubic Image" width={150} height={150} />
           <div>
@@ -71,7 +74,7 @@ export default function Header() {
             <p>Welcome to our Healers Healthcare, where we</p>
           </div>
         </div>
-        <div className="bg-gradient-to-br from-[#1a1f3d86] to-[#080808] px-10 py-10 rounded-xl flex items-center justify-around space-x-20">
+        <div className="bg-gradient-to-br from-[#1a1f3d86] to-[#080808] px-10 py-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-20">
           <div className="text-6xl font-bold">97%</div>
           <div>
             <h2 className="text-4xl font-bold mb-2 text-wrap">Some random 100% text</h2>
