@@ -1,5 +1,6 @@
 // import DNA from "@/components/3D_Elements/DNA";
 import { StickyScrollReveal } from "@/components/Features/Features";
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import TrustedBy2 from "@/components/TrustedBy/TrustedBy2";
 
@@ -15,7 +16,7 @@ export default function Home() {
    
     
     {/* <p>check</p> */}
-
+    <Footer/>
     </div>
   );
 }

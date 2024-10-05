@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 import { ModeToggle } from '../Navbar/ModeToggle'
 import DNA2 from '../3D_Elements/DNA2'
+import ShineBorder from '../ui/shine-border'
 
 export default function Header() {
   return (
@@ -44,6 +45,10 @@ export default function Header() {
       </header>
       
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 relative z-10 mb-10">
+      <ShineBorder
+      className="relative flex  w-full flex-col items-center justify-center overflow-hidden rounded-xl  bg-background md:shadow-xl"
+      color={["#ffff", "#FE8FB5", "#000"]}
+    >
         <div className="bg-gradient-to-br from-[#111427] to-[#080808] px-10 py-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-20">
           <Image src="/CubicTesting.png" alt="Cubic Image" width={150} height={150} />
           <div>
@@ -51,13 +56,21 @@ export default function Header() {
             <p>Welcome to our Healers Healthcare, where we</p>
           </div>
         </div>
-        <div className="bg-gradient-to-br from-[#111427] to-[#080808] px-10 py-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-20">
-          <div className="text-6xl font-bold">97%</div>
+        </ShineBorder>
+
+        <ShineBorder
+      className="relative flex  w-full flex-col items-center justify-center overflow-hidden rounded-xl bg-background md:shadow-xl"
+      color={["#ffff", "#FE8FB5", "#000"]}
+    >
+
+<div className="bg-gradient-to-br from-[#111427] to-[#080808] px-10 py-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-20">
+          <Image src="/CubicTesting.png" alt="Cubic Image" width={150} height={150} />
           <div>
             <h2 className="text-4xl font-bold mb-2 text-wrap">Some random 100% text</h2>
             <p>Welcome to our Healers Healthcare, where we</p>
           </div>
         </div>
+    </ShineBorder>
       </div>
 
       <div className="absolute inset-0 z-0 flex items-center justify-center">
