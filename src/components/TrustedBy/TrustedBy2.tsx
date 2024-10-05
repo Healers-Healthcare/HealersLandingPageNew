@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from 'react'
+
 import Image from 'next/image'
 
 export default function TrustedBy2() {
-  const [hoveredLogo, setHoveredLogo] = useState<number | null>(null)
+
 
   const logos = [
     { src: '/dfinityLogo.png', alt: 'DFINITY logo' },
@@ -24,8 +24,7 @@ export default function TrustedBy2() {
             <div
               key={index}
               className="relative  px-4"
-              onMouseEnter={() => setHoveredLogo(index)}
-              onMouseLeave={() => setHoveredLogo(null)}
+              
             >
               <Image
                 src={logo.src}
