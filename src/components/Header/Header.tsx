@@ -43,8 +43,9 @@ export default function Header() {
           </div>
         </div>
       </header>
-      
-      <div className="container mx-auto px-8 grid md:grid-cols-2 gap-8 relative z-10 mb-10 h-36 ">
+      <div className='w-full '>
+
+      <div className=" grid md:grid-cols-2 gap-8 mx-10   relative z-10 mb-10 h-36 ">
       <ShineBorder
       className="relative flex  w-full flex-col items-center justify-center overflow-hidden rounded-xl  bg-background md:shadow-xl"
       color={["#ffff", "#FE8FB5", "#000"]}
@@ -72,8 +73,9 @@ export default function Header() {
         </div>
     </ShineBorder>
       </div>
+      </div>
 
-      <div className="absolute inset-0  z-0 flex items-start justify-center">
+      <div className="absolute inset-0  z-0 flex items-start justify-start ">
         <DNA2 />
         <div className="absolute top-[30.25rem] -right-[20.375rem] w-[56.625rem] opacity-60 mix-blend-color-dodge pointer-events-none">
                                 <div className="absolute top-1/2 left-1/2 w-[58.85rem] h-[58.85rem] -translate-x-3/4 -translate-y-1/2">
