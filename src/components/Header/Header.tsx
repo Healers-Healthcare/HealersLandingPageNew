@@ -43,16 +43,17 @@ export default function Header() {
           </div>
         </div>
       </header>
-      
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 relative z-10 mb-10">
+      <div className='w-full '>
+
+      <div className=" grid md:grid-cols-2 gap-8 mx-10   relative z-10 mb-10 h-36 ">
       <ShineBorder
       className="relative flex  w-full flex-col items-center justify-center overflow-hidden rounded-xl  bg-background md:shadow-xl"
       color={["#ffff", "#FE8FB5", "#000"]}
     >
-        <div className="bg-gradient-to-br from-[#111427] to-[#080808] px-10 py-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-20">
-          <Image src="/CubicTesting.png" alt="Cubic Image" width={150} height={150} />
+        <div className="bg-gradient-to-br w-full from-[#111427] to-[#080808] px-10 py-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-20">
+          <Image src="/CubicTesting.png" alt="Cubic Image" width={100} height={100} />
           <div>
-            <h2 className="text-4xl font-bold mb-2 text-wrap">Some random 100% text</h2>
+            <h2 className="text-3xl font-bold mb-2 text-wrap">Some random 100% text</h2>
             <p>Welcome to our Healers Healthcare, where we</p>
           </div>
         </div>
@@ -63,17 +64,18 @@ export default function Header() {
       color={["#ffff", "#FE8FB5", "#000"]}
     >
 
-<div className="bg-gradient-to-br from-[#111427] to-[#080808] px-10 py-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-20">
-          <Image src="/CubicTesting.png" alt="Cubic Image" width={150} height={150} />
+<div className="bg-gradient-to-br w-full from-[#111427] to-[#080808] px-10 py-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-20">
+          <Image src="/CubicTesting.png" alt="Cubic Image" width={100} height={100} />
           <div>
-            <h2 className="text-4xl font-bold mb-2 text-wrap">Some random 100% text</h2>
+            <h2 className="text-3xl font-bold mb-2 text-wrap">Some random 100% text</h2>
             <p>Welcome to our Healers Healthcare, where we</p>
           </div>
         </div>
     </ShineBorder>
       </div>
+      </div>
 
-      <div className="absolute inset-0 z-0 flex items-center justify-center">
+      <div className="absolute inset-0  z-0 flex items-start justify-start ">
         <DNA2 />
         <div className="absolute top-[30.25rem] -right-[20.375rem] w-[56.625rem] opacity-60 mix-blend-color-dodge pointer-events-none">
                                 <div className="absolute top-1/2 left-1/2 w-[58.85rem] h-[58.85rem] -translate-x-3/4 -translate-y-1/2">
