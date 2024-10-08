@@ -119,9 +119,8 @@ const config = {
   plugins: [
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     require("tailwindcss-animate"),
-    addVariablesForColors, // Add the new plugin here
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    addVariablesForColors,
+    addVariablesForColors, // Add the new plugin here
   ],
 } satisfies Config
 
