@@ -7,10 +7,10 @@ export default function TrustedBy2() {
 
 
   const logos = [
-    { src: '/dfinityLogo.png', alt: 'DFINITY logo' },
-    { src: '/ICLogo.png', alt: 'Internet Computer logo' },
-    { src: '/ICPLogo.png', alt: 'Crewsphere ICP Hubs Network logo' }
-  ]
+    { id: 1, src: '/dfinityLogo.png', alt: 'DFINITY logo' },
+    { id: 2, src: '/ICLogo.png', alt: 'Internet Computer logo' },
+    { id: 3, src: '/ICPLogo.png', alt: 'Crewsphere ICP Hubs Network logo' }
+  ];
 
   return (
     <section className="text-center py-12">
@@ -20,12 +20,8 @@ export default function TrustedBy2() {
         </p>
        
         <div className="flex justify-evenly mx-auto items-center ">
-          {logos.map((logo, index) => (
-            <div
-              key={index}
-              className="relative  px-4"
-              
-            >
+        {logos.map((logo) => (
+            <div key={logo.id} className="relative px-4">
               <Image
                 src={logo.src}
                 alt={logo.alt}
