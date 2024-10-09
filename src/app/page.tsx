@@ -7,6 +7,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import HospitalCarousel from "@/components/HospitalCarousel/HospitalCarousel";
 import MobileAppSection from "@/components/MobApplicationSection/MobileApplication";
+import Navbar from "@/components/Navbar/Navbar";
 import TrustedBy2 from "@/components/TrustedBy/TrustedBy2";
 import VideoComponent from "@/components/YTSection/Videos";
 import { Sora } from 'next/font/google'
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     
     <div className={sora.className}>
+      <Navbar/> 
     <Header/>
     <TrustedBy2/>
    <Feature2/>

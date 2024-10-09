@@ -43,15 +43,17 @@ export default function FeaturePages() {
   return (
     <section className="py-12 mx-auto sm:mx-32">
       <div className="container mx-auto px-4">
-        <h2 className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  ">What we have for you</h2>
-        <p className="text-xl text-center text-gray-600 mb-8">Comprehensive solutions for modern healthcare management</p>
+        <h2 className="mt-36 mb-14  z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  ">What we have for you</h2>
+        
         
         <div className="flex flex-col gap-8">
-          <div className=" sm:w-full flex  gap-8 ">
+          <div className=" sm:w-full flex  gap-8  " style={{
+            boxSizing: 'border-box',
+          }}>
             {features.map((feature, index) => (
               <button
                 key={feature.title}
-                className={`block w-full text-center  p-0 md:p-4 rounded-lg mb-2 transition-colors ${
+                className={`block w-full text-center text-sm md:text-[1rem]  p-0 md:p-4 rounded-lg mb-2 transition-colors ${
                   currentFeature === index ? 'bg-transparent border shadow-lg' : 'hover:bg-[#0a1519]'
                 }`}
                 onClick={() => setCurrentFeature(index)}
