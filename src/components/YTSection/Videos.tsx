@@ -40,7 +40,7 @@ const VideoCard = ({ video, index }: { video: Video; index: number }) => {
       transition={{ duration: 0.5, delay: index * 0.2 }}
       className="mb-12"
     >
-      <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <Card className="overflow-hidden bg-black/35 shadow-lg hover:shadow-xl transition-shadow duration-300">
         <CardContent className="p-0 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2  gap-6 h-auto md:h-[400px]">
             <div className="p-8 flex flex-col justify-center">
@@ -84,7 +84,7 @@ const VideoCard = ({ video, index }: { video: Video; index: number }) => {
 
 export default function VideoComponent() {
   return (
-    <section className="py-16 lg:py-32 px-4 bg-gradient-to-b from-background to-secondary/10">
+    <section className="py-16 lg:py-32 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl text-center font-semibold mb-12 font-poppins text-primary">Latest From Our Creators and Partners</h2>
         <div className="space-y-12 ">
