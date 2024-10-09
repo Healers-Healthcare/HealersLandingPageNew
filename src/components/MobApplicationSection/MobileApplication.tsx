@@ -19,7 +19,7 @@ export default function MobileAppSection() {
       >
         Download Our Mobile App
       </p>
-      <section className="flex justify-center items-center mb-20 mx-4 sm:mx-10 md:mx-32">
+      <section className="flex justify-center items-center mb-26 mx-4 sm:mx-10 md:mx-32">
         <div className="relative flex h-auto min-h-[500px] w-[1400px] flex-col items-center justify-center overflow-hidden rounded-lg bg-[#cccccb] dark:bg-black md:shadow-xl p-4 sm:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-16 w-full">
             <div className="flex flex-col justify-center items-center ">

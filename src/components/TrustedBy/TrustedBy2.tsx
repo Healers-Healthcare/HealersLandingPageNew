@@ -27,7 +27,7 @@ export default function TrustedBy2() {
                 alt={logo.alt}
                 width={250}
                 height={150}
-                className={`transition-all duration-200 filter grayscale hover:grayscale-0
+                className={`transition-all duration-200 opacity-50 hover:opacity-100 hover:-translate-y-3
                   `
               }
               />

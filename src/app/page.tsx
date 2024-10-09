@@ -1,4 +1,5 @@
 // import DNA from "@/components/3D_Elements/DNA";
+import FAQ from "@/components/FAQ/FAQ";
 import FeaturePages from "@/components/Features/FeaturePages";
 
 import { Feature2 } from "@/components/Features/Features2";
@@ -25,6 +26,7 @@ export default function Home() {
    <VideoComponent/>
    <HospitalCarousel/>
    <MobileAppSection/>
+   <FAQ/>
     {/* <p>check</p> */}
     <Footer/>
     </div>

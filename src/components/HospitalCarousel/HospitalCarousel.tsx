@@ -50,7 +50,7 @@ export default function HospitalCarousel() {
                       <img
                         src={hospital.img}
                         alt={hospital.name}
-                        className="rounded-lg w-full h-full object-cover opacity-45 hover:opacity-100 transition-opacity duration-300"
+                        className="rounded-lg w-full h-full object-cover opacity-45 hover:opacity-100 transition-all hover:scale-95  duration-300 "
                       />
                     </div>
                     <h3 className="text-lg text-[#bababa] font-semibold mb-2">{hospital.name}</h3>
