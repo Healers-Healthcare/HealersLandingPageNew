@@ -16,7 +16,7 @@ export default function TrustedBy2() {
     <section className="text-center py-12">
       <div className="container mx-auto px-4">
       <p id="trustedBy" className="mt-36 mb-10 z-10 whitespace-pre-wrap  text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  ">
-          TRUSTED BY
+          Trusted By
         </p>
        
         <div className="flex justify-evenly mx-auto items-center ">
