@@ -4,7 +4,7 @@ import Image from 'next/image'
 // import { ModeToggle } from '../Navbar/ModeToggle'
 import DNA2 from '../3D_Elements/DNA2'
 import ShineBorder from '../ui/shine-border'
-import Iphone15Pro from '../ui/iphone-15-pro'
+// import Iphone15Pro from '../ui/iphone-15-pro'
 // import { Menu } from 'lucide-react'
 
 export default function Header() {
