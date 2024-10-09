@@ -7,21 +7,25 @@ const features = [
     title: "Health Records",
     description: "Securely store and access patient health records, ensuring comprehensive care and easy information retrieval.",
     gradient: "from-blue-500 to-cyan-500",
+    bgImage: '/sampleBg.png',
   },
   {
     title: "Appointments",
     description: "Efficiently manage and schedule patient appointments, reducing wait times and improving overall clinic flow.",
     gradient: "from-purple-500 to-pink-500",
+    bgImage: '/sampleBg2.png',
   },
   {
     title: "Patient Details",
     description: "Keep track of crucial patient information, including medical history, allergies, and current treatments.",
     gradient: "from-yellow-500 to-red-500",
+    bgImage: '/sampleBg3.png',
   },
   {
     title: "Inventory",
     description: "Monitor and manage medical supplies and equipment, ensuring your facility is always well-stocked and prepared.",
     gradient: "from-green-500 to-emerald-500",
+    bgImage: '/sampleBg4.png',
   },
 ]
 
@@ -48,7 +52,7 @@ export default function FeaturePages() {
               <button
                 key={feature.title}
                 className={`block w-full text-center  p-0 md:p-4 rounded-lg mb-2 transition-colors ${
-                  currentFeature === index ? 'bg-[#00212c] shadow-lg' : 'hover:bg-white/50'
+                  currentFeature === index ? 'bg-transparent border shadow-lg' : 'hover:bg-[#0a1519]'
                 }`}
                 onClick={() => setCurrentFeature(index)}
               >
@@ -68,9 +72,9 @@ export default function FeaturePages() {
                 className="absolute inset-0 rounded-lg overflow-hidden"
               >
                 {/* <div className={`w-full h-full bg-gradient-to-br ${features[currentFeature].gradient}`}></div> */}
-                <div className={`w-full h-full bg-[#00212c]`}></div>
+                <div className={`w-full h-full border rounded-lg`} style={{ backgroundImage: `url(${features[currentFeature].bgImage})`, backgroundSize: 'fill', backgroundPosition: 'center' }}></div>
                 <div className="absolute inset-0 flex items-center justify-center p-8">
-                  <div className="bg-[#174e60a1] p-6 rounded-lg max-w-md  backdrop:shadow-2xl">
+                  <div className=" p-6 rounded-lg max-w-md bg-transparent backdrop-blur-lg ">
                     <h3 className="text-2xl text-white font-bold mb-2">{features[currentFeature].title}</h3>
                     <p className="text-white">{features[currentFeature].description}</p>
                   </div>
