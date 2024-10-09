@@ -26,7 +26,7 @@ export default function HospitalCarousel() {
     <p id="clients" className="mt-36 mb-20 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#707070] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545] ">
         Clients Onboard with Us
       </p>
-    <div className="max-w-7xl mx-auto py-10 relative">
+    <div className="max-w-full mx-auto  py-10 ">
       <Carousel
         opts={{
           align: "start",
@@ -37,7 +37,7 @@ export default function HospitalCarousel() {
             delay: 2000,
           }),
         ]}
-        className="w-full"
+        className="w-[88%] mx-auto"
         ref={emblaRef}
       >
         <CarouselContent>
@@ -61,8 +61,8 @@ export default function HospitalCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        {/* <CarouselPrevious />
+        <CarouselNext /> */}
       </Carousel>
       <div className="absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-background to-transparent pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-background to-transparent pointer-events-none" />

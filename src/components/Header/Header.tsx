@@ -1,27 +1,27 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import Image from 'next/image'
-import { Button } from "@/components/ui/button"
-import { ModeToggle } from '../Navbar/ModeToggle'
+// import { Button } from "@/components/ui/button"
+// import { ModeToggle } from '../Navbar/ModeToggle'
 import DNA2 from '../3D_Elements/DNA2'
 import ShineBorder from '../ui/shine-border'
-import { Menu } from 'lucide-react'
+// import { Menu } from 'lucide-react'
 
 export default function Header() {
-  const navLinks = [
-    { href: "#about", text: "About" },
-    { href: "#features", text: "Features" },
-    { href: "#faq", text: "FAQ" },
-    { href: "#contact", text: "Contact Us" },
-  ];
+  // const navLinks = [
+  //   { href: "#about", text: "About" },
+  //   { href: "#features", text: "Features" },
+  //   { href: "#faq", text: "FAQ" },
+  //   { href: "#contact", text: "Contact Us" },
+  // ];
 
   return (
     // <div className='max-w-full'>
-      <div className="bg-gradient-to-br  from-[#000000] max-w-full via-[#020910] to-[#01080f] text-white max-h-[1080px] relative overflow-hidden">
-        <div className='mx-auto relative'>
+      <div className="bg-gradient-to-br  from-[#000000] max-w-full via-[#020910] to-[#01080f] text-white  relative overflow-hidden">
+        <div className='mx-auto overflow-visible relative'>
 
       <div className=" mx-auto relative z-10">
-        <header className="container mx-auto px-4 py-6">
-          <nav className="flex justify-between items-center mb-8 md:mb-16">
+        <header className="container mx-auto mt-32 px-4 py-6">
+          {/* <nav className="flex justify-between items-center mb-8 md:mb-16">
             <div className="flex items-center space-x-2">
               <Image src="/HealersHealthcareOfficialLogo 1.png" alt="Healers Healthcare" width={120} height={120} className="w-auto h-auto" />
             </div>
@@ -42,7 +42,7 @@ export default function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </div>
-          </nav>
+          </nav> */}
           
           <div className="flex flex-col lg:flex-row items-center justify-between px-4 ">
             <div className="w-full lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
@@ -96,11 +96,7 @@ export default function Header() {
 
       <div className="absolute inset-0 z-0 -translate-x-4">
         <DNA2 />
-        <div className="absolute top-[30.25rem] -right-[20.375rem] w-[56.625rem] opacity-60 mix-blend-color-dodge pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 w-[58.85rem] h-[58.85rem] -translate-x-3/4 -translate-y-1/2">
-            <Image className="w-full opacity-40" src="/gradient.png" width={942} height={942} alt="Background gradient" />
-          </div>
-        </div>
+        
       </div>
         </div>
     </div>
