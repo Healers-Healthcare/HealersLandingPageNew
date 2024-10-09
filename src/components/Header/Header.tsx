@@ -4,6 +4,7 @@ import Image from 'next/image'
 // import { ModeToggle } from '../Navbar/ModeToggle'
 import DNA2 from '../3D_Elements/DNA2'
 import ShineBorder from '../ui/shine-border'
+import Iphone15Pro from '../ui/iphone-15-pro'
 // import { Menu } from 'lucide-react'
 
 export default function Header() {
@@ -69,11 +70,12 @@ export default function Header() {
               className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-xl bg-background shadow-xl"
               color={["#ffff", "#FE8FB5", "#000"]}
             >
-              <div className="bg-gradient-to-br w-full from-[#111427] to-[#080808] p-6 md:p-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-8">
-                <Image src="/CubicTesting.png" alt="Cubic Image" width={80} height={80} className="mb-4 lg:mb-0" />
+              <div className="bg-gradient-to-br w-full from-[#111427] to-[#080808]  md:p-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-8">
+                <Image src="/PhonePhoto.png" alt="Cubic Image" width={110} height={110} className="z-20 mb-4 lg:mb-0 hover:-translate-y-4 transition-all duration-200" />
+                
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-2">Some random 100% text</h2>
-                  <p className="text-sm md:text-base">Welcome to our Healers Healthcare, where we</p>
+                  <h2 className="text-2xl md:text-2xl text-center font-bold mb-2">Healer Healthcare Mobile Application</h2>
+                  <p className="text-sm text-center md:text-base">Get Personalized Health Experience With Our Moblie Application</p>
                 </div>
               </div>
             </ShineBorder>
@@ -83,7 +85,7 @@ export default function Header() {
               color={["#ffff", "#FE8FB5", "#000"]}
             >
               <div className="bg-gradient-to-br w-full from-[#111427] to-[#080808] p-6 md:p-10 rounded-xl flex flex-col lg:flex-row text-center lg:text-left items-center justify-around lg:space-x-8">
-                <Image src="/CubicTesting.png" alt="Cubic Image" width={80} height={80} className="mb-4 lg:mb-0" />
+                <Image src="/CubicTesting.png" alt="Cubic Image" width={110} height={110} className="mb-4 lg:mb-0" />
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold mb-2">Some random 100% text</h2>
                   <p className="text-sm md:text-base">Welcome to our Healers Healthcare, where we</p>

@@ -1,51 +1,56 @@
 import { HoverEffect } from "../ui/card-hover-effect";
+import { FaHospitalAlt, FaMobileAlt, FaSearch, FaChartLine, FaClipboardList, FaGift } from "react-icons/fa"; // Icons from react-icons
 
 export function Feature2() {
   return (
-
     <div className="max-w-6xl mx-auto px-8 md:px-0">
-        <p id="trustedBy" className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  ">
+      <p
+        id="trustedBy"
+        className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter pointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text leading-none text-transparent dark:from-white dark:to-[#454545]"
+      >
         The Features Out of the Blue
-        </p>
+      </p>
       <HoverEffect items={projects} />
     </div>
   );
 }
+
 export const projects = [
   {
-    title: "Stripe",
+    icon: <FaHospitalAlt className="text-3xl text-blue-500" />, // Icon for hospital data management
+    title: "Comprehensive Patient Data Management",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "We offer a robust platform that enables hospitals to efficiently manage patient data, ensuring secure and organized record-keeping.",
   },
   {
-    title: "Netflix",
+    icon: <FaClipboardList className="text-3xl text-green-500" />, // Icon for appointment scheduling
+    title: "Streamlined Appointment Scheduling",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Simplifies the management of day-to-day outpatient department (OPD) appointments, enhancing operational efficiency.",
   },
   {
-    title: "Google",
+    icon: <FaSearch className="text-3xl text-yellow-500" />, // Icon for digital solutions
+    title: "Tailored Digital Solutions",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "Customized digital solutions, including landing page development and SEO, tailored to meet the unique needs of each hospital.",
   },
   {
-    title: "Meta",
+    icon: <FaChartLine className="text-3xl text-purple-500" />, // Icon for growth
+    title: "Promised Growth",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "By leveraging our solutions, hospitals can expect a significant growth of 20-30% in their operations and patient engagement.",
   },
   {
-    title: "Amazon",
+    icon: <FaMobileAlt className="text-3xl text-red-500" />, // Icon for mobile app
+    title: "User-Friendly Mobile Application",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+      "Our Android app allows patients to book appointments with their preferred doctors at nearby hospitals listed on our platform.",
   },
   {
-    title: "Microsoft",
+    icon: <FaGift className="text-3xl text-pink-500" />, // Icon for rewards system
+    title: "Reward System & NFTs",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+      "Patients earn NFTs and crypto tokens, redeemable for services like blood tests, scans, appointments, and medicine purchases.",
   },
 ];
+
