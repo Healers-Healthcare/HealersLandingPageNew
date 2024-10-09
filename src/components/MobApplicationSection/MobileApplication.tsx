@@ -15,7 +15,7 @@ export default function MobileAppSection() {
     <div className={sora.className} >
       <p
         id="downloadMobileApp"
-        className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white"
+        className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  "
       >
         Download Our Mobile App
       </p>
@@ -24,7 +24,7 @@ export default function MobileAppSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-16 w-full">
             <div className="flex flex-col justify-center items-center ">
               <SparklesText text="Healers Mobile App" className="text-center mt-10 md:mt-2" />
-              <p className="z-10 whitespace-pre-wrap text-center lg:text-left text-xl font-medium tracking-tighter text-black dark:text-white mt-4">
+              <p className="z-10 whitespace-pre-wrap text-center lg:text-left text-xl font-medium tracking-tighter text-black dark:text-white/60 mt-4">
                 Get the best experience on the go
               </p>
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-8">

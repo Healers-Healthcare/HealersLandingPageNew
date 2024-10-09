@@ -39,7 +39,7 @@ export default function FeaturePages() {
   return (
     <section className="py-12 mx-auto sm:mx-32">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-2">What we have for you</h2>
+        <h2 className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  ">What we have for you</h2>
         <p className="text-xl text-center text-gray-600 mb-8">Comprehensive solutions for modern healthcare management</p>
         
         <div className="flex flex-col gap-8">
