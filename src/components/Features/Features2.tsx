@@ -3,7 +3,7 @@ import { FaHospitalAlt, FaMobileAlt, FaSearch, FaChartLine, FaClipboardList, FaG
 
 export function Feature2() {
   return (
-    <div className="max-w-6xl mx-auto px-8 md:px-0">
+    <div className=" max-w-6xl mx-auto px-8 md:px-0" id="Features1">
       <p
         id="trustedBy"
         className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter pointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text leading-none text-transparent dark:from-white dark:to-[#454545]"
@@ -11,6 +11,7 @@ export function Feature2() {
         The Features Out of the Blue
       </p>
       <HoverEffect items={projects} />
+      
     </div>
   );
 }

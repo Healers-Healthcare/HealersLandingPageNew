@@ -7,25 +7,25 @@ const features = [
     title: "Health Records",
     description: "Securely store and access patient health records, ensuring comprehensive care and easy information retrieval.",
     gradient: "from-blue-500 to-cyan-500",
-    bgImage: '/sampleBg.png',
+    bgImage: '/feature1.png',
   },
   {
     title: "Appointments",
     description: "Efficiently manage and schedule patient appointments, reducing wait times and improving overall clinic flow.",
     gradient: "from-purple-500 to-pink-500",
-    bgImage: '/sampleBg2.png',
+    bgImage: '/feature2.png',
   },
   {
     title: "Patient Details",
     description: "Keep track of crucial patient information, including medical history, allergies, and current treatments.",
     gradient: "from-yellow-500 to-red-500",
-    bgImage: '/sampleBg3.png',
+    bgImage: '/feature3.png',
   },
   {
     title: "Inventory",
     description: "Monitor and manage medical supplies and equipment, ensuring your facility is always well-stocked and prepared.",
     gradient: "from-green-500 to-emerald-500",
-    bgImage: '/sampleBg4.png',
+    bgImage: '/feature4.png',
   },
 ]
 
@@ -74,12 +74,12 @@ export default function FeaturePages() {
                 className="absolute inset-0 rounded-lg overflow-hidden"
               >
                 {/* <div className={`w-full h-full bg-gradient-to-br ${features[currentFeature].gradient}`}></div> */}
-                <div className={`w-full h-full border rounded-lg`} style={{ backgroundImage: `url(${features[currentFeature].bgImage})`, backgroundSize: 'fill', backgroundPosition: 'center' }}></div>
-                <div className="absolute inset-0 flex items-center justify-center p-8">
+                <div className=" flex w-full h-full items-center justify-center p-8">
                   <div className=" p-6 rounded-lg max-w-md bg-transparent backdrop-blur-lg ">
                     <h3 className="text-2xl text-white font-bold mb-2">{features[currentFeature].title}</h3>
                     <p className="text-white">{features[currentFeature].description}</p>
                   </div>
+                <div className={`w-full h-full border rounded-lg`} style={{ backgroundImage: `url(${features[currentFeature].bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
                 </div>
               </motion.div>
             </AnimatePresence>
