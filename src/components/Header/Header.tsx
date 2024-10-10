@@ -27,15 +27,13 @@ export default function Header() {
                 </p>
               </div>
             </div>
-          </header>
-
           <div className='w-full max-w-[1425px] px-4 sm:px-6 lg:px-8 xl:px-0 mx-auto'>
             <div className="grid md:grid-cols-2 gap-6 md:gap-10 mb-10">
               <ShineBorder
                 className="relative flex w-full flex-col overflow-hidden rounded-xl bg-background shadow-xl"
-                color={["#ffff", "#FE8FB5", "#000"]}
+                color={["#ffff", "#015874","#015874"]}
               >
-                <div className="bg-gradient-to-br w-full from-[#111427] to-[#080808] p-4 sm:p-6 md:p-8 lg:py-4 rounded-xl flex flex-col lg:flex-row items-center justify-between sm:space-x-4 lg:space-x-8" id='box1'>
+                <div className="bg-black w-full p-4 sm:p-6 md:p-8 lg:py-4 rounded-xl flex flex-col lg:flex-row items-center justify-between sm:space-x-4 lg:space-x-8" id='box1'>
                   <Image src="/PhonePhoto2.png" alt="Cubic Image" width={150} height={150} className="z-20 mb-4 sm:mb-0 hover:-translate-y-3 transition-all duration-200" />
                   
                   <div className="text-center lg:text-left">
@@ -47,9 +45,9 @@ export default function Header() {
 
               <ShineBorder
                 className="relative flex w-full flex-col overflow-hidden rounded-xl bg-background shadow-xl"
-                color={["#ffff", "#FE8FB5", "#000"]}
+                color={["#ffff", "#015874","#015874"]}
               >
-                <div className="bg-gradient-to-br w-full h-full from-[#111427] to-[#080808] p-4 sm:p-6 md:p-8 lg:py-0 rounded-xl flex flex-col lg:flex-row items-center justify-between sm:space-x-4 lg:space-x-8" id='box2'>
+                <div className="bg-black w-full h-full p-4 sm:p-6 md:p-8 lg:py-0 rounded-xl flex flex-col lg:flex-row items-center justify-between sm:space-x-4 lg:space-x-8" id='box2'>
                   <Image src="/CubicTesting.png" alt="Cubic Image" width={120} height={120} className="z-20 mb-4 sm:mb-0 hover:-translate-y-3 transition-all duration-200" />
                   
                   <div className='text-center lg:text-left'>
@@ -76,12 +74,14 @@ export default function Header() {
               </ShineBorder>
             </div>
           </div>
+          </header>
+
         </div>
 
         <div className="absolute inset-0 z-0 -translate-x-4">
           <DNA2 />
           <div className="absolute top-[30.25rem] -right-[20.375rem] w-[56.625rem] opacity-60 mix-blend-color-dodge pointer-events-none">
-                                <div className="absolute top-1/2 left-1/2 w-[48.85rem] h-[48.85rem] -translate-x-3/4 -translate-y-3/4">
+                                <div className="absolute top-1/2 left-1/2 w-[28.85rem] h-[28.85rem] -translate-x-3/4 -translate-y-3/4">
                                     <Image className="w-full opacity-40" src="/gradient.png" width={942} height={942} alt="" />
                                 </div>
                             </div>

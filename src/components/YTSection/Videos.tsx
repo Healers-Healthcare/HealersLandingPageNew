@@ -40,7 +40,7 @@ const VideoCard = ({ video, index }: { video: Video; index: number }) => {
       transition={{ duration: 0.5, delay: index * 0.2 }}
       className="mb-12"
     >
-      <Card className="overflow-hidden bg-black/35 shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <Card className="overflow-hidden bg-black shadow-lg hover:shadow-xl transition-shadow duration-300">
         <CardContent className="p-0 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2  gap-6 h-auto md:h-[400px]">
             <div className="p-8 flex flex-col justify-center">
@@ -84,9 +84,16 @@ const VideoCard = ({ video, index }: { video: Video; index: number }) => {
 
 export default function VideoComponent() {
   return (
-    <section className="py-16 lg:py-20 px-4 bg-background" id='ytLinks'>
+    <div className='relative'>
+      <div className="absolute opacity-40 mix-blend-color-dodge pointer-events-none">
+        <div className="absolute -translate-y-[10%] translate-x-[90%] size-[18.85rem] lg:size-[68.85rem]">
+          <Image className="w-full rotate-[180deg] opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
+        </div>
+      </div>
+
+    <section className="py-16 lg:py-20 px-4 bg-transparent" id='ytLinks'>
       <div className="max-w-6xl mx-auto">
-        <h2 className="mt-36 mb-20 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#707070] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  ">Latest From Our Creators and Partners</h2>
+        <h2 className="mt-36 mb-10 z-10  whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white">Latest From Our Creators and Partners</h2>
         <div className="space-y-12 ">
           {videos.map((video, index) => (
             <VideoCard key={video.id} video={video} index={index} />
@@ -94,5 +101,7 @@ export default function VideoComponent() {
         </div>
       </div>
     </section>
+    
+    </div>
   )
 }

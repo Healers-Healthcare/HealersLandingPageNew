@@ -1,57 +1,55 @@
+import Image from "next/image";
 import { HoverEffect } from "../ui/card-hover-effect";
-import { FaHospitalAlt, FaMobileAlt, FaSearch, FaChartLine, FaClipboardList, FaGift } from "react-icons/fa"; // Icons from react-icons
+import { FaHospitalAlt, FaMobileAlt, FaSearch, FaChartLine, FaClipboardList, FaGift } from "react-icons/fa";
 
 export function Feature2() {
   return (
-    <div className=" max-w-6xl mx-auto px-8 md:px-0" id="Features1">
-      <p
-        id="trustedBy"
-        className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter pointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text leading-none text-transparent dark:from-white dark:to-[#454545]"
-      >
-        The Features Out of the Blue
-      </p>
-      <HoverEffect items={projects} />
+    <div className="relative">
+      <div className="max-w-6xl mx-auto px-8 md:px-0" id="Features1">
+        <p className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white">
+          The Features Out of the Blue
+        </p>
+        <HoverEffect items={projects} />
+      </div>
       
+      <div className="absolute opacity-70 mix-blend-color-dodge pointer-events-none">
+        <div className="absolute -translate-y-[120%] size-[18.85rem] lg:size-[48.85rem]">
+          <Image className="w-full opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
+        </div>
+      </div>
     </div>
   );
 }
 
 export const projects = [
   {
-    icon: <FaHospitalAlt className="text-3xl text-blue-500" />, // Icon for hospital data management
-    title: "Comprehensive Patient Data Management",
-    description:
-      "We offer a robust platform that enables hospitals to efficiently manage patient data, ensuring secure and organized record-keeping.",
+    icon: <FaHospitalAlt className="text-blue-500" />,
+    title: "Patient Data Management",
+    description: "Efficiently manage patient data with our secure and organized record-keeping platform.",
   },
   {
-    icon: <FaClipboardList className="text-3xl text-green-500" />, // Icon for appointment scheduling
-    title: "Streamlined Appointment Scheduling",
-    description:
-      "Simplifies the management of day-to-day outpatient department (OPD) appointments, enhancing operational efficiency.",
+    icon: <FaClipboardList className="text-green-500" />,
+    title: "Appointment Scheduling",
+    description: "Streamline OPD appointments for enhanced operational efficiency.",
   },
   {
-    icon: <FaSearch className="text-3xl text-yellow-500" />, // Icon for digital solutions
-    title: "Tailored Digital Solutions",
-    description:
-      "Customized digital solutions, including landing page development and SEO, tailored to meet the unique needs of each hospital.",
+    icon: <FaSearch className="text-yellow-500" />,
+    title: "Digital Solutions",
+    description: "Customized digital solutions including landing page development and SEO for hospitals.",
   },
   {
-    icon: <FaChartLine className="text-3xl text-purple-500" />, // Icon for growth
+    icon: <FaChartLine className="text-purple-500" />,
     title: "Promised Growth",
-    description:
-      "By leveraging our solutions, hospitals can expect a significant growth of 20-30% in their operations and patient engagement.",
+    description: "Expect 20-30% growth in operations and patient engagement with our solutions.",
   },
   {
-    icon: <FaMobileAlt className="text-3xl text-red-500" />, // Icon for mobile app
-    title: "User-Friendly Mobile Application",
-    description:
-      "Our Android app allows patients to book appointments with their preferred doctors at nearby hospitals listed on our platform.",
+    icon: <FaMobileAlt className="text-red-500" />,
+    title: "Mobile Application",
+    description: "User-friendly Android app for booking appointments with preferred doctors at nearby hospitals.",
   },
   {
-    icon: <FaGift className="text-3xl text-pink-500" />, // Icon for rewards system
-    title: "Reward System & NFTs",
-    description:
-      "Patients earn NFTs and crypto tokens, redeemable for services like blood tests, scans, appointments, and medicine purchases.",
+    icon: <FaGift className="text-pink-500" />,
+    title: "Rewards & NFTs",
+    description: "Earn NFTs and crypto tokens redeemable for various medical services and purchases.",
   },
 ];
-

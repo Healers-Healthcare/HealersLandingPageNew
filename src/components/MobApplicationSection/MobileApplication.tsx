@@ -12,14 +12,19 @@ const sora = Sora({ subsets: ['latin'], })
 
 export default function MobileAppSection() {
   return (
-    <div className={sora.className} >
+    <div className='max-w-7xl mx-auto relative' >
+      <div className="absolute opacity-70 mix-blend-color-dodge pointer-events-none">
+        <div className="absolute -translate-y-[20%] -translate-x-[20%]  size-[18.85rem] lg:size-[48.85rem]">
+          <Image className="w-full opacity-100 rotate-[66deg]" src="/gradient2.png" width={942} height={942} alt="" />
+        </div>
+      </div>
       <p
         id="app"
-        className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  "
+        className="mt-36 mb-10  text-center text-3xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white "
       >
         Download Our Mobile App
       </p>
-      <section className="flex justify-center items-center mb-26 mx-4 sm:mx-10 md:mx-32">
+      <section className=" flex justify-center items-center mb-26  sm:mx-10 md:mx-10">
         <div className="relative flex h-auto min-h-[500px] w-[1400px] flex-col items-center justify-center overflow-hidden rounded-lg bg-[#cccccb] dark:bg-black md:shadow-xl p-4 sm:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-16 w-full">
             <div className="flex flex-col justify-center items-center ">

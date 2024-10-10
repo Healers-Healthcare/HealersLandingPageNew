@@ -13,9 +13,16 @@ export default function TrustedBy2() {
   ];
 
   return (
-    <section className="text-center py-12">
+   
+
+    <section className="text-center py-12 relative">
+      <div className="absolute opacity-40 mix-blend-color-dodge pointer-events-none">
+        <div className="absolute -translate-y-[10%] translate-x-[90%] size-[18.85rem] lg:size-[68.85rem]">
+          <Image className="w-full rotate-[180deg] opacity-100" src="/gradient.png" width={942} height={942} alt="" />
+        </div>
+      </div>
       <div className="container mx-auto px-4">
-      <p id="trustedBy" className="mt-36 mb-10 z-10 whitespace-pre-wrap  text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  ">
+      <p id="trustedBy" className="mt-36 mb-10 z-10  whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white ">
           Trusted By
         </p>
        
@@ -27,7 +34,7 @@ export default function TrustedBy2() {
                 alt={logo.alt}
                 width={250}
                 height={150}
-                className={`transition-all duration-200 opacity-50 hover:opacity-100 hover:-translate-y-3
+                className={`transition-all duration-200 filter grayscale hover:grayscale-0
                   `
               }
               />
@@ -45,5 +52,7 @@ export default function TrustedBy2() {
         </div>
       </div>
     </section>
+   
+  
   )
 }
