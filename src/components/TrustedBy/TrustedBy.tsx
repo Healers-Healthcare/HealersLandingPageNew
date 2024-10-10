@@ -52,12 +52,8 @@ export default function TrustedBy() {
   }, [])
 
   return (
-    <section className=" text-white py-16 relative">
-      <div className="absolute opacity-70 mix-blend-color-dodge pointer-events-none">
-        <div className="absolute -translate-y-[0%] size-[18.85rem] lg:size-[48.85rem]">
-          <Image className="w-full opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
-        </div>
-      </div>
+    <section className="bg-black text-white py-16 relative">
+      
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <h2 className="text-4xl font-bold mb-4 md:mb-0">Trusted by 200+ companies around the world</h2>

@@ -6,9 +6,6 @@ import { cn } from "@/lib/utils"
 import Iphone15Pro from "@/components/ui/iphone-15-pro"
 import DotPattern from "@/components/ui/dot-pattern"
 import SparklesText from "@/components/ui/sparkles-text"
-import { Sora } from 'next/font/google'
-
-const sora = Sora({ subsets: ['latin'], })
 
 export default function MobileAppSection() {
   return (
