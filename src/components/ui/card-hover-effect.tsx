@@ -1,5 +1,5 @@
 "use client";
-
+/* eslint-disable prefer-const */
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -51,7 +51,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <ShineBorder
                 className="relative p-1 flex w-full flex-col overflow-hidden rounded-xl bg-background shadow-xl"
-                color={["#ffff", "#015874","#015874"]}
+                color={["#000", "#015874","#015874"]}
               >
 
           <Card>
