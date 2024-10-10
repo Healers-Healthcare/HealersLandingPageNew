@@ -11,6 +11,7 @@ export function Feature2() {
         The Features Out of the Blue
       </p>
       <HoverEffect items={projects} />
+      
     </div>
   );
 }

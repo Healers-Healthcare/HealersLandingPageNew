@@ -80,6 +80,11 @@ export default function Header() {
 
         <div className="absolute inset-0 z-0 -translate-x-4">
           <DNA2 />
+          <div className="absolute top-[30.25rem] -right-[20.375rem] w-[56.625rem] opacity-60 mix-blend-color-dodge pointer-events-none">
+                                <div className="absolute top-1/2 left-1/2 w-[48.85rem] h-[48.85rem] -translate-x-3/4 -translate-y-3/4">
+                                    <Image className="w-full opacity-40" src="/gradient.png" width={942} height={942} alt="" />
+                                </div>
+                            </div>
         </div>
       </div>
     </div>
