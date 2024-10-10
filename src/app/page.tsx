@@ -1,4 +1,5 @@
 // import DNA from "@/components/3D_Elements/DNA";
+import { ContactUs } from "@/components/ContactUs/ContactUs";
 import FAQ from "@/components/FAQ/FAQ";
 import FeaturePages from "@/components/Features/FeaturePages";
 
@@ -29,6 +30,7 @@ export default function Home() {
    <HospitalCarousel/>
    <MobileAppSection/>
    <FAQ/>
+   <ContactUs/>
     {/* <p>check</p> */}
     <Footer/>
     </div>

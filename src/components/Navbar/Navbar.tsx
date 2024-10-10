@@ -153,7 +153,7 @@ export function Navbar() {
                       Get To Know About Our Clients
                     </ListItem>
                   </ScrollTo>
-                  <ScrollTo to="downloadMobileApp">
+                  <ScrollTo to="app">
                     <ListItem title="Mobile Application">
                       Get Our Mobile Application 
                     </ListItem>
@@ -178,14 +178,14 @@ export function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="#features" passHref legacyBehavior>
+              <Link href="#Features1" passHref legacyBehavior>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Features
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="#faq" passHref legacyBehavior>
+              <Link href="#FAQ" passHref legacyBehavior>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   FAQ
                 </NavigationMenuLink>
@@ -220,12 +220,10 @@ export function Navbar() {
         <MetaMaskLogo />
         </div>
         <Link href="https://gyoj3-uaaaa-aaaap-qkfra-cai.icp0.io/login">
-          <button className="relative inline-flex h-12 w-36 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 transform hover:-translate-y-1 transition duration-400">
-            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              Connect Wallet
-            </span>
-          </button>
+        <Button className="px-5 bg-transparent border text-white border-white hover:bg-white hover:text-[#0A0F29] transition duration-500 rounded-full hover:-translate-y-2 ">
+            Get Started
+          </Button>
+        
         </Link>
       </div>
     </div>

@@ -14,7 +14,7 @@ export default function MobileAppSection() {
   return (
     <div className={sora.className} >
       <p
-        id="downloadMobileApp"
+        id="app"
         className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#454545] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545]  "
       >
         Download Our Mobile App

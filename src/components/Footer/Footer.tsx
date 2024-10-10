@@ -1,13 +1,14 @@
+'use client';
 import { MailIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { TextHoverEffect } from "../ui/text-hover-effect";
-
+import ScrollTo from "../ui/scrollTo";
 const Footer = () => {
   return (
     <>
       <TextHoverEffect text="Healers" />
-      <footer className="relative z-10 bg-white dark:bg-black pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] rounded-lg">
+      <footer className="relative z-10 bg-white dark:bg-gradient-to-b from-zinc-950 to-black pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] rounded-lg">
         <div className="container">
           <div className="-mx-4 flex justify-between flex-wrap text-center sm:text-left">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
@@ -27,8 +28,10 @@ const Footer = () => {
             <LinkGroup header="Company">
               <div className="flex flex-col gap-3">
                 <ul className="">
-                  <li>About Healers</li>
-                  <li>Contact & Support</li>
+                  <ScrollTo to="contactUs" >
+
+                  Contact & Support
+                  </ScrollTo>
                 </ul>
                 <NavLink link="/#" label="Privacy Policy" />
               </div>
@@ -37,10 +40,22 @@ const Footer = () => {
             <LinkGroup header="Quick Links">
               <div className="flex flex-col gap-3">
                 <ul>
+                <ScrollTo to="Features1" >
+
                   <li>Our Features</li>
-                  <li>Queries</li>
+                </ScrollTo>
+                <ScrollTo to="FAQ" >
+
+                  <li>General Queries</li>
+                </ScrollTo>
+                <ScrollTo to="app" >
+
                   <li>Download App</li>
+                </ScrollTo>
+                <ScrollTo to="clients" >
+
                   <li>Our Clients</li>
+                </ScrollTo>
                 </ul>
               </div>
             </LinkGroup>
