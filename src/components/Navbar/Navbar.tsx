@@ -52,7 +52,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div className="max-w-full relative overflow-hidden">
+    <div className="max-w-full relative overflow-hidden ">
         <div className="mx-auto relative z-50">
 
     <div className="w-screen mx-auto  flex fixed justify-around md:justify-between z-50 md:px-10 bg-transparent backdrop-blur-md">
