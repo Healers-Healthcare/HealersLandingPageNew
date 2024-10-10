@@ -2,12 +2,12 @@
 import { MailIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { TextHoverEffect } from "../ui/text-hover-effect";
+// import { TextHoverEffect } from "../ui/text-hover-effect";
 import ScrollTo from "../ui/scrollTo";
 const Footer = () => {
   return (
     <>
-      <TextHoverEffect text="Healers" />
+      {/* <TextHoverEffect text="Healers" /> */}
       <footer className="relative z-10 bg-white dark:bg-gradient-to-b from-zinc-950 to-black pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] rounded-lg">
         <div className="container">
           <div className="-mx-4 flex justify-between flex-wrap text-center sm:text-left">
