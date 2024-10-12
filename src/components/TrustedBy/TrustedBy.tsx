@@ -1,5 +1,6 @@
 "use client"
 
+// import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 const logos = [
@@ -51,7 +52,8 @@ export default function TrustedBy() {
   }, [])
 
   return (
-    <section className="bg-black text-white py-16">
+    <section className="bg-black text-white py-16 relative">
+      
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <h2 className="text-4xl font-bold mb-4 md:mb-0">Trusted by 200+ companies around the world</h2>

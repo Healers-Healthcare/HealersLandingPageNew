@@ -3,10 +3,11 @@
 
 // import { useEffect, useRef, useState } from 'react'
 import { Card, CardContent } from "@/components/ui/card"
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import { Carousel, CarouselContent,CarouselNext,CarouselPrevious, CarouselItem } from "@/components/ui/carousel"
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import React from 'react'
+import Image from "next/image"
 
 // Sample hospital data
 const hospitals = [
@@ -22,8 +23,14 @@ export default function HospitalCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()])
 
   return (
-    <>
-    <p id="clients" className="mt-36 mb-20 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighterpointer-events-none bg-gradient-to-r from-black to-[#707070] bg-clip-text  leading-none text-transparent dark:from-white dark:to-[#454545] ">
+    
+    <div className="relative">
+      <div className="absolute opacity-60 mix-blend-color-dodge pointer-events-none">
+                                <div className="absolute -translate-y-[30%] translate-x-[70%]  size-[18.85rem] lg:size-[48.85rem] ">
+                                    <Image className="w-full opacity-100 -rotate-[45deg] " src="/gradient2.png" width={942} height={942} alt="" />
+                                </div>
+                            </div>
+    <p id="clients" className="mt-36 mb-10 z-10  whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white">
         Clients Onboard with Us
       </p>
     <div className="max-w-full mx-auto  py-10 ">
@@ -37,7 +44,7 @@ export default function HospitalCarousel() {
             delay: 2000,
           }),
         ]}
-        className="w-[88%] mx-auto"
+        className="max-w-6xl mx-auto"
         ref={emblaRef}
       >
         <CarouselContent>
@@ -50,7 +57,7 @@ export default function HospitalCarousel() {
                       <img
                         src={hospital.img}
                         alt={hospital.name}
-                        className="rounded-lg w-full h-full object-cover opacity-45 hover:opacity-100 transition-all hover:scale-95  duration-300 "
+                        className="rounded-lg w-full h-full object-cover opacity-90 hover:opacity-100 transition-all hover:scale-95  duration-300 "
                       />
                     </div>
                     <h3 className="text-lg text-[#bababa] font-semibold mb-2">{hospital.name}</h3>
@@ -61,12 +68,12 @@ export default function HospitalCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* <CarouselPrevious />
-        <CarouselNext /> */}
+        <CarouselPrevious />
+        <CarouselNext />
       </Carousel>
-      <div className="absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-background to-transparent pointer-events-none" />
     </div>
-    </>
+     
+    </div>
+    
   )
 }

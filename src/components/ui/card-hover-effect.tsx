@@ -1,9 +1,9 @@
-/* eslint-disable prefer-const */
 "use client";
+/* eslint-disable prefer-const */
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
-// import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import ShineBorder from "./shine-border";
 
 export const HoverEffect = ({
   items,
@@ -21,21 +21,21 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-10",
         className
       )}
     >
       {items.map((item, idx) => (
         <div
           key={idx}
-          className="relative group block p-4 h-full w-full"
+          className="relative group"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-zinc-900 block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-white/10 block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -49,34 +49,24 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
+          <ShineBorder
+                className="relative p-1 flex w-full flex-col overflow-hidden rounded-xl bg-background shadow-xl"
+                color={["#000", "#015874","#015874"]}
+              >
 
           <Card>
-            <div className="flex items-center justify-center mb-4 filter grayscale">
-              {item.icon}
-            </div>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardContent icon={item.icon} title={item.title} description={item.description} isHovered={hoveredIndex === idx} />
           </Card>
+              </ShineBorder>
         </div>
       ))}
     </div>
   );
 };
 
-export const Card = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
+const Card = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div
-      className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
-        className
-      )}
-    >
+    <div className="rounded-2xl h-full w-full  p-4 overflow-hidden bg-black  dark:border-white/[0.2] group-hover:border-slate-700 relative z-20">
       <div className="relative z-50">
         <div className="p-4">{children}</div>
       </div>
@@ -84,35 +74,39 @@ export const Card = ({
   );
 };
 
-export const CardTitle = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
+const CardContent = ({ icon, title, description, isHovered }: { 
+  icon: React.ReactNode; 
+  title: string; 
+  description: string;
+  isHovered: boolean;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-semibold text-center tracking-wide mt-4 font-sans", className)}>
-      {children}
-    </h4>
-  );
-};
-
-export const CardDescription = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
-  return (
-    <p
-      className={cn(
-        "mt-4 text-zinc-400 tracking-wide leading-relaxed font-sans text-center text-sm",
-        className
-      )}
-    >
-      {children}
-    </p>
+    <div className="relative h-64 flex flex-col items-center justify-center overflow-hidden">
+      <motion.div
+        className="flex flex-col items-center"
+        initial={false}
+        animate={isHovered ? { y: -20 } : { y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="text-6xl mb-4 transition-all duration-300 ease-in-out transform group-hover:scale-75 filter">
+          {icon}
+        </div>
+        <motion.h4 
+          className="text-zinc-100 font-semibold text-center tracking-wide text-2xl mb-2"
+          animate={isHovered ? { opacity: 0 } : { opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          {title}
+        </motion.h4>
+      </motion.div>
+      <motion.p
+        className="text-zinc-400 tracking-wide leading-relaxed text-xl text-center  absolute inset-x-0 bottom-0"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isHovered ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.3 }}
+      >
+        {description}
+      </motion.p>
+    </div>
   );
 };
