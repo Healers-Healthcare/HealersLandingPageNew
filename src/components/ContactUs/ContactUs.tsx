@@ -3,10 +3,16 @@
 import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 export function ContactUs() {
   return (
-    <div>
+    <div className="relative">
+      <div className="absolute opacity-70 mix-blend-color-dodge pointer-events-none">
+        <div className="absolute -translate-y-[20%] translate-x-[20%]  size-[18.85rem] lg:size-[48.85rem] animate-blob2">
+          <Image className="w-full opacity-100 rotate-[66deg]" src="/gradient2.png" width={942} height={942} alt="" />
+        </div>
+      </div>
 <p
         id="contactUs"
         className="mt-36 mb-10 z-10  whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white "
@@ -14,7 +20,7 @@ export function ContactUs() {
         That&apos;s Healers For You
       </p>
     <div className="flex justify-center items-center pb-24">
-      <div className="h-[60vh] inset-0 left-0 right-0 relative w-[80%] bg-zinc-950 overflow-hidden flex flex-col items-center justify-center rounded-lg">
+      <div className="h-[60vh] max-w-6xl inset-0 left-0 right-0 relative w-[80%] bg-black overflow-hidden flex flex-col items-center justify-center rounded-lg">
         <div className="absolute inset-0 w-full h-full bg-background z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
         <Boxes />

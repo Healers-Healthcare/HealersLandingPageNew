@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-require-imports */
+import { blob } from "stream/consumers";
 import type { Config } from "tailwindcss"
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 
@@ -107,12 +108,22 @@ const config = {
   				to: {
   					'background-position': '0% 0%'
   				}
-  			}
+  			},
+			  blobAnimation: {
+				'0%, 100%': { transform: 'translate(0, -20%) rotate(0deg)' },
+				'50%': { transform: 'translate(10%, -20%) rotate(180deg)' },
+			  },
+			  blobAnimation2: {
+				'0%, 100%': { transform: 'translate(40, -0%) rotate(0deg)' },
+				'50%': { transform: 'translate(10%, -0%) rotate(180deg)' },
+			  }
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			shine: 'shine var(--duration) infinite linear'
+  			shine: 'shine var(--duration) infinite linear',
+			blob: 'blobAnimation 30s ease-in-out infinite',
+			blob2: 'blobAnimation2 30s ease-in-out infinite',
   		}
   	}
   },
