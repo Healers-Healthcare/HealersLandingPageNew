@@ -35,7 +35,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-white/10 block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-transparent block rounded-lg"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -50,8 +50,8 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <ShineBorder
-                className="relative p-1 flex w-full flex-col overflow-hidden rounded-xl bg-background shadow-xl"
-                color={["#000", "#015874","#015874"]}
+                className="relative p-1 flex w-full flex-col overflow-hidden rounded-lg bg-background shadow-xl"
+                color={["#000", "#015874","#fff"]}
               >
 
           <Card>
@@ -66,7 +66,7 @@ export const HoverEffect = ({
 
 const Card = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="rounded-2xl h-full w-full  p-4 overflow-hidden bg-black  dark:border-white/[0.2] group-hover:border-slate-700 relative z-20">
+    <div className="rounded-lg h-full w-full  p-4 overflow-hidden bg-[#000000] hover:bg-[#060b10] transition-all duration-200  dark:border-white/[0.2] group-hover:border-slate-700 relative z-20">
       <div className="relative z-50">
         <div className="p-4">{children}</div>
       </div>
@@ -92,7 +92,7 @@ const CardContent = ({ icon, title, description, isHovered }: {
           {icon}
         </div>
         <motion.h4 
-          className="text-zinc-100 font-semibold text-center tracking-wide text-2xl mb-2"
+          className="text-zinc-100  font-semibold text-center tracking-wide text-2xl mb-2"
           animate={isHovered ? { opacity: 0 } : { opacity: 1 }}
           transition={{ duration: 0.3 }}
         >

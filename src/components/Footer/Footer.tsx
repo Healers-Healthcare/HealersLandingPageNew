@@ -4,11 +4,12 @@ import Image from "next/image";
 import React from "react";
 // import { TextHoverEffect } from "../ui/text-hover-effect";
 import ScrollTo from "../ui/scrollTo";
+import Link from "next/link";
 const Footer = () => {
   return (
     <>
       {/* <TextHoverEffect text="Healers" /> */}
-      <footer className="relative z-10 bg-white dark:bg-gradient-to-b from-zinc-950 to-black pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] rounded-lg">
+      <footer className="relative z-10 bg-white dark:bg-gradient-to-b from-[#01080f] to-black pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] rounded-lg">
         <div className="container">
           <div className="-mx-4 flex justify-between flex-wrap text-center sm:text-left">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
@@ -108,6 +109,13 @@ const Footer = () => {
                 </div>
                 <p className="text-sm text-body-color dark:text-dark-6">
                   &copy; 2025 Healers Healthcare. All rights reserved.
+                  <div className="text-red-600 style-none my-2 list-unstyled">
+
+                <Link href="/account-action">
+                Account Deletion Request
+                </Link>
+                
+                </div>
                 </p>
               </div>
             </div>

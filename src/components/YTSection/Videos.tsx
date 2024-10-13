@@ -87,7 +87,7 @@ export default function VideoComponent() {
     <div className='relative'>
       <div className="absolute opacity-40 mix-blend-color-dodge pointer-events-none">
         <div className="absolute -translate-y-[10%] translate-x-[90%] size-[18.85rem] lg:size-[68.85rem]">
-          <Image className="w-full rotate-[180deg] opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
+          <Image className="w-full rotate-[180deg] opacity-100" src="/gradient.png" width={942} height={942} alt="" />
         </div>
       </div>
 
@@ -101,6 +101,11 @@ export default function VideoComponent() {
         </div>
       </div>
     </section>
+    <div className="absolute opacity-40 mix-blend-color-dodge pointer-events-none">
+        <div className="absolute -translate-y-[70%] translate-x-[0%] size-[18.85rem] lg:size-[68.85rem]">
+          <Image className="w-full rotate-[180deg] opacity-100" src="/gradient.png" width={942} height={942} alt="" />
+        </div>
+      </div>
     
     </div>
   )

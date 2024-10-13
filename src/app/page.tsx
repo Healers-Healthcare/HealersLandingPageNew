@@ -15,7 +15,7 @@ const sora = Sora({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <div className={`${sora.className} min-h-screen w-full bg-gradient-to-b from-[#000000] max-w-full via-[#01060a] to-[#01080f]   text-white  overflow-hidden `}>
+    <div className={`${sora.className} min-h-screen w-full bg-gradient-to-b from-[#000000] max-w-full via-[#041727] to-[#01080f]   text-white  overflow-hidden `}>
       {/* <div className="absolute inset-0 min-h-screen h-full bg-[url('/noiseBg.png')]  bg-repeat opacity-100 pointer-events-none" /> */}
       <div className="relative z-10 min-h-screen h-full bg-[url('/noiseBg.png')]  bg-opacity-100 backdrop:blur-sm bg-repeat">
         <Navbar />
