@@ -49,6 +49,11 @@ export default function FeaturePages() {
                                     <Image className="w-full  opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
                                 </div>
                             </div>
+                            <div className="absolute   opacity-60 mix-blend-color-dodge pointer-events-none">
+                                <div className="absolute translate-y-[2%] translate-x-[90%] size-[18.85rem] lg:size-[68.85rem] ">
+                                    <Image className="w-full  opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
+                                </div>
+                            </div>
 
     <section className="py-12 mx-auto sm:mx-32">
       <div className="container mx-auto px-4">

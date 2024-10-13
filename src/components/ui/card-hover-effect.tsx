@@ -51,7 +51,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <ShineBorder
                 className="relative p-1 flex w-full flex-col overflow-hidden rounded-xl bg-background shadow-xl"
-                color={["#000", "#015874","#015874"]}
+                color={["#000", "#015874","#fff"]}
               >
 
           <Card>
