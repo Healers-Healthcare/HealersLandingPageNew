@@ -9,13 +9,12 @@ export function Feature2() {
         <p className="mt-36 mb-10 z-10 whitespace-pre-wrap text-center text-3xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white">
           The Features Out of the Blue
         </p>
-        <HoverEffect items={projects} />
-      </div>
-      
-      <div className="absolute opacity-70 mix-blend-color-dodge pointer-events-none">
-        <div className="absolute -translate-y-[120%] size-[18.85rem] lg:size-[48.85rem]">
-          <Image className="w-full opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
+        <div className="blob1 absolute opacity-70 mix-blend-color-dodge pointer-events-none">
+          <div className="absolute -translate-y-[20%] size-[18.85rem] lg:size-[68.85rem] animate-blob">
+            <Image className="w-full opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
+          </div>
         </div>
+        <HoverEffect items={projects} />
       </div>
     </div>
   );

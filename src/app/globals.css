@@ -58,6 +58,22 @@
     --chart-5: 340 75% 55%;
   }
 }
+@keyframes blobAnimation {
+  0%, 100% {
+    transform: translate(0, -20%) rotate(0deg);
+  }
+  50% {
+    transform: translate(10%, -20%) rotate(180deg);
+  }
+}
+
+.animate-blob {
+  animation: blobAnimation 30s ease-in-out infinite;
+}
+.animate-blob2 {
+  animation: blobAnimation2 30s ease-in-out infinite;
+  -webkit-animation: blobAnimation2 30s ease-in-out infinite;
+}
 
 @layer base {
   * {

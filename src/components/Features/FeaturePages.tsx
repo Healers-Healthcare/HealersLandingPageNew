@@ -44,14 +44,14 @@ export default function FeaturePages() {
 
   return (
     <div className="relative">
-      <div className="absolute   opacity-60 mix-blend-color-dodge pointer-events-none">
-                                <div className="absolute translate-y-[2%] translate-x-[0%] size-[18.85rem] lg:size-[68.85rem] ">
+      <div className="absolute opacity-60 mix-blend-color-dodge pointer-events-none">
+                                <div className="absolute  translate-x-[0%] size-[18.85rem] lg:size-[68.85rem] animate-blob2 ">
                                     <Image className="w-full  opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
                                 </div>
                             </div>
                             <div className="absolute   opacity-60 mix-blend-color-dodge pointer-events-none">
                                 <div className="absolute translate-y-[2%] translate-x-[90%] size-[18.85rem] lg:size-[68.85rem] ">
-                                    <Image className="w-full  opacity-100" src="/gradient2.png" width={942} height={942} alt="" />
+                                    <Image className="w-full  opacity-100" src="/gradient.png" width={942} height={942} alt="" />
                                 </div>
                             </div>
 
@@ -60,7 +60,7 @@ export default function FeaturePages() {
         <h2 className="mt-36 mb-10  text-center text-3xl sm:text-5xl font-medium tracking-tighter text-black dark:text-white">What we have for you</h2>
         
         
-        <div className="flex flex-col py-10 bg-[#000000] rounded-lg gap-8">
+        <div className="flex flex-col py-10 max-w-6xl mx-auto bg-[#000000] rounded-lg gap-8">
           <div className=" sm:w-full px-10 flex  gap-8  " style={{
             boxSizing: 'border-box',
           }}>
@@ -88,7 +88,7 @@ export default function FeaturePages() {
                 className="absolute inset-0 rounded-lg overflow-hidden"
               >
                 {/* <div className={`w-full h-full bg-gradient-to-br ${features[currentFeature].gradient}`}></div> */}
-                <div className=" flex w-full h-full items-center justify-center p-8">
+                <div className=" flex flex-col md:flex-row w-full h-full items-center justify-center p-8">
                   <div className=" p-6 rounded-lg max-w-md  ">
                     <h3 className="text-2xl text-white font-bold mb-2">{features[currentFeature].title}</h3>
                     <p className="text-white">{features[currentFeature].description}</p>
